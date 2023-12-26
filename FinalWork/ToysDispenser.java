@@ -24,7 +24,7 @@ public class ToysDispenser {
                 System.out.println("Некорректный ввод. Повторите снова.");
                 break;
             }
-            System.out.print("Введите частоту выподения где 1(10%) а 3(30%) шанс: ");
+            System.out.print("Введите частоту выпадения где 1(10% шанс): ");
             if (sc.hasNextInt()) {
                 drop_chance = sc.nextInt();
                 if (drop_chance <= 0) {
@@ -63,7 +63,7 @@ public class ToysDispenser {
         if (toys.size() >= 2) {
             Toy prize = getPrize();
             System.out.println("Приз: " + prize.name);
-            saveResult(String.format("ID:%d Название:%s Шанс Выпадения:%d", prize.id, prize.name, prize.drop_chance));
+            saveResult(String.format("ID:%d Название:%s", prize.id, prize.name));
         } else {
             System.out.println("Вы должны добавить в призовой фонд как минимум две игрушки.");
         }

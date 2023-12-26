@@ -16,6 +16,6 @@ public class Toy implements Comparable<Toy>{
 
     @Override
     public int compareTo(Toy o) {
-        return 0;
+        return Integer.compare(this.drop_chance,o.drop_chance);
     }
 }
